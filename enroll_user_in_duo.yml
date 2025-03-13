@@ -1,0 +1,26 @@
+---
+- name: Enroll A User Into DUO Admin Portal
+  hosts: localhost
+  become: false
+  gather_facts: false
+  tasks:
+
+    - name: Check if duo_client is installed
+      ansible.builtin.command: "python3 -m pip show duo_client"
+      register: duo_client_check
+      ignore_errors: true
+      changed_when: false
+
+    - name: Install duo_client if not installed
+      ansible.builtin.pip:
+        name: duo_client
+        state: present
+      when: duo_client_check.rc != 0
+
+    - name: Enroll User To DUO
+      philip860.duo_mfa.tools:
+        username: "kdalphas"
+        host: "api-XXXXXXXX.duosecurity.com"
+        ikey: "{{ ikey_password_var }}"
+        skey: "{{ skey_password_var }}"
+        action: "enroll"
