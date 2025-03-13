@@ -1,5 +1,5 @@
 ---
-- name: Enroll A User Into DUO Admin Portal
+- name: Set A Enrolled User Into Bypass Mode In DUO Admin Portal
   hosts: localhost
   become: false
   gather_facts: false
@@ -23,4 +23,4 @@
         host: "api-XXXXXXXX.duosecurity.com"
         ikey: "{{ ikey_password_var }}"
         skey: "{{ skey_password_var }}"
-        action: "enroll"
+        action: "bypass"
