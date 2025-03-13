@@ -15,7 +15,7 @@ Before using this module, ensure you have the following installed on your Ansibl
   pip install duo_client
   ```
 
-## Module: `duo_mfa`
+## Module: `duo_mfa.tools`
 
 ### Description
 This module enables interaction with the Duo Security API to:
@@ -37,7 +37,7 @@ This module is useful for automating user management within Duo Security when in
 
 ### Usage
 
-This module can be used within an Ansible playbook to perform actions on Duo Security users. The playbook should reference the `philip860.duo_mfa` collection and call the `duo_mfa` module.
+This module can be used within an Ansible playbook to perform actions on Duo Security users. The playbook should reference the `philip860.duo_mfa` collection and call the `duo_mfa.tools` module.
 
 ### Example Playbooks
 
