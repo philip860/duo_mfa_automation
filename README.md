@@ -1,7 +1,7 @@
 # Ansible Collection - philip860.duo_mfa.tools
 
 ## Overview
-This Ansible collection provides a custom module, `duo_mfa`, which allows managing Duo Security Multi-Factor Authentication (MFA) actions such as enrolling, bypassing, and deleting users.
+This Ansible collection provides a custom module, `duo_mfa.tools`, which allows managing Duo Security Multi-Factor Authentication (MFA) actions such as enrolling, bypassing, and deleting users.
 
 ## Requirements
 
@@ -15,7 +15,7 @@ Before using this module, ensure you have the following installed on your Ansibl
   pip install duo_client
   ```
 
-## Module: `duo_mfa`
+## Module: `duo_mfa.tools`
 
 ### Description
 This module enables interaction with the Duo Security API to:
